@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories — TACT</title>
+  <meta name="description" content="Stories and updates from the TACT research programme.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;1,7..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-brand" aria-label="TACT Home">
+      <svg class="nav-logo-svg" viewBox="0 0 110 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 10 C18 4, 34 4, 48 10 C62 16, 72 16, 82 10" stroke="#2dd4a8" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+        <text x="2" y="32" font-family="'Bricolage Grotesque',sans-serif" font-size="20" font-weight="700" fill="#e2e8f0">tact</text>
+      </svg>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#gap">The Gap</a></li>
+      <li><a href="index.html#communities">Communities</a></li>
+      <li><a href="index.html#approach">Our Approach</a></li>
+      <li><a href="index.html#team">Team</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="stories.html" class="active">Stories</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <div class="page-header">
+      <a href="index.html" class="back-link">&larr; Back to home</a>
+      <p class="section-label">From the Field</p>
+      <h1 class="section-title">Stories</h1>
+      <p class="section-body">Updates, reflections, and behind-the-scenes from the TACT team — co-design sessions, fieldwork, events, and lessons learned.</p>
+    </div>
+
+    <div class="stories-grid">
+      <div class="story-card">
+        <div class="story-card-body">
+          <p class="story-date">Coming Soon</p>
+          <h3>First co-design sessions with SayAphasia</h3>
+          <p>A look at our early workshops with people with aphasia — what we learned, what surprised us, and how it's shaping our approach.</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="story-card-body">
+          <p class="story-date">Coming Soon</p>
+          <h3>Working with schools: designing with young people</h3>
+          <p>How we're bringing secondary school students into the design process as genuine co-designers of communication technology.</p>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="story-card-body">
+          <p class="story-date">Coming Soon</p>
+          <h3>What is total communication?</h3>
+          <p>An introduction to the concept at the heart of TACT — and why it matters for technology design.</p>
+        </div>
+      </div>
+      <!--
+        TEMPLATE:
+        <div class="story-card">
+          <div class="story-card-body">
+            <p class="story-date">Month Year</p>
+            <h3>Story Title</h3>
+            <p>Brief description...</p>
+          </div>
+        </div>
+      -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logos">
+      <span class="footer-logo-text">UKRI</span>
+      <span class="footer-logo-text">King's College London</span>
+      <span class="footer-logo-text">City St George's</span>
+    </div>
+    <p>&copy; 2026 TACT — Total Communication Technologies · <a href="mailto:timothy.neate@kcl.ac.uk">timothy.neate@kcl.ac.uk</a></p>
+    <p style="margin-top:0.5rem;">Funded by UKRI Future Leaders Fellowship</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60); });
+    document.getElementById('navToggle').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
+    document.querySelectorAll('#navLinks a').forEach(link => { link.addEventListener('click', () => { document.getElementById('navLinks').classList.remove('open'); }); });
+  </script>
+</body>
+</html>
