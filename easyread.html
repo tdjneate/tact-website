@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easy Read — TACT</title>
+  <meta name="description" content="Easy Read version of the TACT project for people with aphasia and communication needs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .easyread-section { max-width: 700px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .easyread-block { background: var(--navy-mid); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; padding: 2rem 2rem 1.5rem; margin-bottom: 1.5rem; }
+    .easyread-block h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; line-height: 1.3; }
+    .easyread-block p { font-size: 1.15rem; line-height: 2; color: var(--text-primary); font-weight: 400; margin-bottom: 0.8rem; }
+    .tts-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; padding: 0.5rem 1.2rem; border-radius: 100px; border: 1px solid var(--teal); background: var(--teal-subtle); color: var(--text-primary); font-family: var(--font-display); font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: background 0.2s; }
+    .tts-btn:hover { background: var(--teal-faded); }
+    .tts-btn svg { flex-shrink: 0; }
+    .easyread-intro { text-align: center; margin-bottom: 2rem; }
+    .easyread-intro p { font-size: 1.1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto; }
+    .tts-word { transition: background 0.15s, color 0.15s; border-radius: 3px; padding: 0 1px; }
+    .tts-word.active { background: var(--teal); color: #fff; }
+    .easyread-block.speaking p { color: var(--text-muted); }
+    .easyread-block.speaking .tts-word.active { color: #fff; }
+    .easyread-block.speaking .tts-word.spoken { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-brand" aria-label="TACT Home">
+      <img src="tact-logo.png" alt="TACT" style="height:30px;">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="easyread.html" class="active">Easy Read</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header" id="main">
+    <p class="section-label">Easy Read</p>
+    <h1 class="section-title">About TACT</h1>
+    <p class="section-body">This page explains TACT in a simple way. You can listen to each section.</p>
+  </div>
+
+  <div class="easyread-section">
+
+    <div class="easyread-block">
+      <h2>What is TACT?</h2>
+      <p>TACT is a research project at King's College London.</p>
+      <p>We are making new technology to help people communicate.</p>
+      <button class="tts-btn" data-text="TACT is a research project at King's College London. We are making new technology to help people communicate." aria-label="Listen to this section">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        Listen
+      </button>
+    </div>
+
+    <div class="easyread-block">
+      <h2>Who do we work with?</h2>
+      <p>We work with people who have aphasia. Aphasia makes it hard to speak and understand words. It often happens after a stroke.</p>
+      <p>We also work with children who find talking difficult.</p>
+      <button class="tts-btn" data-text="We work with people who have aphasia. Aphasia makes it hard to speak and understand words. It often happens after a stroke. We also work with children who find talking difficult." aria-label="Listen to this section">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        Listen
+      </button>
+    </div>
+
+    <div class="easyread-block">
+      <h2>What is the problem?</h2>
+      <p>Most technology is made for people who can read and type easily.</p>
+      <p>Many people communicate in other ways. They use gestures, drawing, pointing, and facial expressions.</p>
+      <p>Current technology does not support this well.</p>
+      <button class="tts-btn" data-text="Most technology is made for people who can read and type easily. Many people communicate in other ways. They use gestures, drawing, pointing, and facial expressions. Current technology does not support this well." aria-label="Listen to this section">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        Listen
+      </button>
+    </div>
+
+    <div class="easyread-block">
+      <h2>What are we doing?</h2>
+      <p>We are building new tools together with the people who will use them.</p>
+      <p>We listen to what people need. Then we design and test new ideas.</p>
+      <p>Everything we make will be free for everyone to use.</p>
+      <button class="tts-btn" data-text="We are building new tools together with the people who will use them. We listen to what people need. Then we design and test new ideas. Everything we make will be free for everyone to use." aria-label="Listen to this section">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        Listen
+      </button>
+    </div>
+
+    <div class="easyread-block">
+      <h2>Who is in the team?</h2>
+      <p>Tim Neate leads the project. He is at King's College London.</p>
+      <p>Maddy Cruice is a speech and language expert at City St George's.</p>
+      <p>Filip and Wenqi are researchers on the team.</p>
+      <button class="tts-btn" data-text="Tim Neate leads the project. He is at King's College London. Maddy Cruice is a speech and language expert at City St George's. Filip and Wenqi are researchers on the team." aria-label="Listen to this section">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        Listen
+      </button>
+    </div>
+
+    <div class="easyread-block">
+      <h2>How to contact us</h2>
+      <p>You can email Tim at <a href="mailto:timothy.neate@kcl.ac.uk" style="color:var(--teal);text-decoration:underline;">timothy.neate@kcl.ac.uk</a></p>
+      <p>We would like to hear from you.</p>
+      <button class="tts-btn" data-text="You can email Tim at timothy.neate@kcl.ac.uk. We would like to hear from you." aria-label="Listen to this section">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        Listen
+      </button>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 TACT — Total Communication Technologies · <a href="mailto:timothy.neate@kcl.ac.uk">timothy.neate@kcl.ac.uk</a></p>
+    <p style="margin-top:0.5rem;">Funded by UKRI Future Leaders Fellowship</p>
+  </footer>
+
+  <script>
+    const ICON_PLAY = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
+    const ICON_STOP = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+
+    // Nav scroll + mobile toggle
+    window.addEventListener('scroll', () => { document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60); });
+    document.getElementById('navToggle').addEventListener('click', () => { document.getElementById('navLinks').classList.toggle('open'); });
+    document.querySelectorAll('#navLinks a').forEach(link => { link.addEventListener('click', () => { document.getElementById('navLinks').classList.remove('open'); }); });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.15, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Wrap each paragraph's text nodes in word spans for highlighting
+    document.querySelectorAll('.easyread-block').forEach(block => {
+      block.querySelectorAll('p').forEach(p => {
+        const walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
+        const textNodes = [];
+        while (walker.nextNode()) textNodes.push(walker.currentNode);
+        textNodes.forEach(node => {
+          const parts = node.textContent.split(/(\s+)/);
+          const frag = document.createDocumentFragment();
+          parts.forEach(part => {
+            if (/\S/.test(part)) {
+              const span = document.createElement('span');
+              span.className = 'tts-word';
+              span.textContent = part;
+              frag.appendChild(span);
+            } else {
+              frag.appendChild(document.createTextNode(part));
+            }
+          });
+          node.parentNode.replaceChild(frag, node);
+        });
+      });
+    });
+
+    // TTS with readalong highlighting
+    let activeBlock = null;
+
+    function resetBlock(block) {
+      block.classList.remove('speaking');
+      block.querySelectorAll('.tts-word').forEach(w => w.classList.remove('active', 'spoken'));
+      const btn = block.querySelector('.tts-btn');
+      btn.innerHTML = ICON_PLAY + ' Listen';
+    }
+
+    document.querySelectorAll('.tts-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const block = btn.closest('.easyread-block');
+
+        if (speechSynthesis.speaking) {
+          speechSynthesis.cancel();
+          if (activeBlock === block) {
+            resetBlock(block);
+            activeBlock = null;
+            return;
+          }
+          if (activeBlock) resetBlock(activeBlock);
+        }
+
+        const words = Array.from(block.querySelectorAll('.tts-word'));
+        const text = btn.getAttribute('data-text');
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.85;
+        utterance.pitch = 1;
+
+        activeBlock = block;
+        block.classList.add('speaking');
+        btn.innerHTML = ICON_STOP + ' Stop';
+
+        // Track character position to word-span index mapping
+        const plainWords = text.split(/\s+/);
+        let charPos = 0;
+        const wordMap = [];
+        plainWords.forEach((w, i) => {
+          wordMap.push({ start: charPos, end: charPos + w.length, index: i });
+          charPos += w.length + 1;
+        });
+
+        utterance.onboundary = (e) => {
+          if (e.name !== 'word') return;
+          const ci = e.charIndex;
+          const match = wordMap.findIndex(w => ci >= w.start && ci < w.end);
+          if (match < 0) return;
+
+          words.forEach((w, i) => {
+            if (i < match) { w.classList.remove('active'); w.classList.add('spoken'); }
+            else if (i === match) { w.classList.add('active'); w.classList.remove('spoken'); }
+            else { w.classList.remove('active', 'spoken'); }
+          });
+        };
+
+        utterance.onend = () => {
+          words.forEach(w => { w.classList.remove('active'); w.classList.add('spoken'); });
+          setTimeout(() => { resetBlock(block); activeBlock = null; }, 600);
+        };
+
+        speechSynthesis.speak(utterance);
+      });
+    });
+  </script>
+</body>
+</html>
